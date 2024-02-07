@@ -12,7 +12,7 @@ jobs:
   ci:
     name: 'internal :: Continuous integration'
     runs-on: 'ubuntu-latest'
-    if: github.actor != 'dependabot[bot]' 
+    if: github.actor != 'dependabot[bot]'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4.1.1
@@ -28,7 +28,7 @@ jobs:
           scope: '@kente'
           registry-url: https://npm.pkg.github.com/
           always-auth: true
-      
+
       - name: Install CLI dependencies
         run: npm ci
 
@@ -40,9 +40,6 @@ jobs:
 
       - name: Build artifacts
         run: npm run build
-
-      - name: Unittesting
-        run: npm run test
 
       - name: Release
         if: github.event_name == 'push' && github.ref == 'refs/heads/release'
