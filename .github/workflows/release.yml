@@ -2,10 +2,12 @@ name: Release
 on:
   push:
     branches:
-      - feature/devopspipelineadd
+      - master
+      - main
   pull_request:
     branches:
       - main
+      - master
       - feature/devopspipelineadd
 jobs:
   ci:

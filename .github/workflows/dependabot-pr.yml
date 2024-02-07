@@ -2,7 +2,7 @@ name: 'internal :: Dependabot Continuous integration'
 
 on:
   pull_request:
-    branches: [main]
+    branches: [master]
 
 jobs:
   dependabot:
