@@ -1,0 +1,43 @@
+{
+  "run": {
+    "command": "nx affected:lint --fix",
+    "startTime": "2024-02-06T13:46:48.866Z",
+    "endTime": "2024-02-06T13:46:58.583Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "kente-dependencies:lint",
+      "target": "lint",
+      "projectName": "kente-dependencies",
+      "hash": "13307973866483038526",
+      "startTime": "2024-02-06T13:46:48.875Z",
+      "endTime": "2024-02-06T13:46:53.730Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
+    },
+    {
+      "taskId": "mf-dependencies:lint",
+      "target": "lint",
+      "projectName": "mf-dependencies",
+      "hash": "4853043162265998552",
+      "startTime": "2024-02-06T13:46:48.876Z",
+      "endTime": "2024-02-06T13:46:57.314Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
+    },
+    {
+      "taskId": "ms-dependencies:lint",
+      "target": "lint",
+      "projectName": "ms-dependencies",
+      "hash": "15131220803258945900",
+      "startTime": "2024-02-06T13:46:48.876Z",
+      "endTime": "2024-02-06T13:46:58.576Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
+    }
+  ]
+}

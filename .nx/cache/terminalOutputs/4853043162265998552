@@ -1,0 +1,9 @@
+
+Oops! Something went wrong! :(
+
+ESLint: 8.56.0
+
+No files matching the pattern "." were found.
+Please check for typing mistakes in the pattern.
+
+Warning: run-commands command "eslint . --fix" exited with non-zero status code

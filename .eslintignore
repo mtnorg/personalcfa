@@ -1,0 +1,13 @@
+coverage
+dist
+node_modules
+reports
+static
+templates
+__tests__
+documentation
+.lighthouseci
+.lighthouseci/
+.eslintcache
+dependencies/
+lib/

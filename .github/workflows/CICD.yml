@@ -1,0 +1,50 @@
+name: 'internal :: Continuous integration / Continuous delivery'
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  ci:
+    name: 'internal :: Continuous integration'
+    runs-on: 'ubuntu-latest'
+    if: github.actor != 'dependabot[bot]' 
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.1.1
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.PACKAGES_TOKEN }}
+
+      - name: Set up node
+        uses: actions/setup-node@v4.0.1
+        with:
+          node-version: 20
+          cache: 'npm'
+          scope: '@kente'
+          registry-url: https://npm.pkg.github.com/
+          always-auth: true
+      
+      - name: Install CLI dependencies
+        run: npm ci
+
+      - name: Check format
+        run: npm run format:check
+
+      - name: Check Linting
+        run: npm run lint:check
+
+      - name: Build artifacts
+        run: npm run build
+
+      - name: Unittesting
+        run: npm run test
+
+      - name: Release
+        if: github.event_name == 'push' && github.ref == 'refs/heads/release'
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.PACKAGES_TOKEN}}
+          GITHUB_TOKEN: ${{secrets.PACKAGES_TOKEN}}
+        run: npm run semantic-release

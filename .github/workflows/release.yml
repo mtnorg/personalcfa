@@ -1,0 +1,41 @@
+name: Release
+on:
+  push:
+    branches:
+      - feature/devopspipelineadd
+  pull_request:
+    branches:
+      - main
+      - feature/devopspipelineadd
+jobs:
+  ci:
+    name: 'Continuous integration for release'
+    runs-on: 'ubuntu-latest'
+    if: ${{ github.actor != 'dependabot[bot]' }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.1.1
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.PACKAGES_TOKEN }}
+
+      - name: Set up node
+        uses: actions/setup-node@v4.0.1
+        with:
+          node-version: 20
+          registry-url: https://npm.pkg.github.com/
+          scope: '@kente'
+          cache: 'npm'
+      
+      - name: Install CLI dependencies
+        run: npm ci
+
+      - name: Build artifacts
+        run: npm run build
+
+      - name: Release
+        if: github.event_name == 'push' && github.ref == 'refs/heads/release'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.PACKAGES_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PACKAGES_TOKEN }}
+        run: npx semantic-release

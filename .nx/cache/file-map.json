@@ -1,0 +1,546 @@
+{
+  "version": "6.0",
+  "nxVersion": "18.0.2",
+  "deps": {
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^11.1.1",
+    "handlebars": "^4.7.8",
+    "path": "^0.12.7",
+    "rxjs": "^7.8.1",
+    "uuid": "^9.0.1",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@types/chalk": "^2.2.0",
+    "@types/commander": "^2.12.2",
+    "@types/fs-extra": "^11.0.4",
+    "@types/jest": "^29.5.10",
+    "@types/mustache": "^4.2.5",
+    "@types/node": "^20.9.2",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.2",
+    "handlebars-loader": "^1.7.3",
+    "husky": "^8.0.3",
+    "jest": "^29.7.0",
+    "prettier": "^3.0.3",
+    "semantic-release": "^23.0.0",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.1.1",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    },
+    {
+      "name": "@nx/webpack/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "serveTargetName": "serve",
+        "previewTargetName": "preview"
+      }
+    },
+    {
+      "name": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
+      }
+    }
+  ],
+  "fileMap": {
+    "nonProjectFiles": [],
+    "projectFileMap": {
+      "kente-dependencies": [
+        {
+          "file": "templates/fa-template/dependencies/package.json",
+          "hash": "8207899888688021802",
+          "deps": [
+            "npm:@types/jest",
+            "npm:@types/node",
+            "npm:typescript",
+            "npm:@typescript-eslint/parser",
+            "npm:eslint",
+            "npm:eslint-config-prettier",
+            "npm:eslint-plugin-import",
+            "npm:eslint-plugin-prettier",
+            "npm:eslint-plugin-react",
+            "npm:prettier"
+          ]
+        }
+      ],
+      "ms-dependencies": [
+        {
+          "file": "dependencies/microservices/package.json",
+          "hash": "11846554314709167138",
+          "deps": [
+            "npm:typescript",
+            "npm:@semantic-release/changelog",
+            "npm:@semantic-release/commit-analyzer",
+            "npm:prettier",
+            "npm:rimraf",
+            "npm:ts-loader"
+          ]
+        }
+      ],
+      "mf-dependencies": [
+        {
+          "file": "dependencies/microfrontends/package.json",
+          "hash": "8617320308840172902",
+          "deps": [
+            "npm:react-is",
+            "npm:typescript",
+            "npm:@semantic-release/changelog",
+            "npm:@semantic-release/commit-analyzer",
+            "npm:prettier",
+            "npm:rimraf",
+            "npm:ts-loader"
+          ]
+        }
+      ],
+      "@cma/cli": [
+        {
+          "file": ".eslintignore",
+          "hash": "13196420358304637950"
+        },
+        {
+          "file": ".eslintrc",
+          "hash": "5181594726485838938"
+        },
+        {
+          "file": ".github/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": ".github/auto-merge.yml",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": ".github/dependabot.yml",
+          "hash": "8351225895610872776"
+        },
+        {
+          "file": ".github/workflows/CICD.yml",
+          "hash": "12920378318214198641"
+        },
+        {
+          "file": ".github/workflows/CODEOWNERS",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": ".github/workflows/automergePR.yml",
+          "hash": "7460314461979430798"
+        },
+        {
+          "file": ".github/workflows/dependabot-pr.yml",
+          "hash": "15337593668760251083"
+        },
+        {
+          "file": ".github/workflows/release.yml",
+          "hash": "1271306248884672228"
+        },
+        {
+          "file": ".gitignore",
+          "hash": "11335782829854983833"
+        },
+        {
+          "file": ".npmignore",
+          "hash": "12232102988625520587"
+        },
+        {
+          "file": ".npmrc",
+          "hash": "14432465394895905015"
+        },
+        {
+          "file": ".prettierignore",
+          "hash": "10499298772468257718"
+        },
+        {
+          "file": ".prettierrc.js",
+          "hash": "13253065754854230919"
+        },
+        {
+          "file": "CODEOWNERS",
+          "hash": "12919588190854240908"
+        },
+        {
+          "file": "README.md",
+          "hash": "12181202872982885080"
+        },
+        {
+          "file": "jest.config.js",
+          "hash": "9591912040330034966"
+        },
+        {
+          "file": "lib/cli.ts",
+          "hash": "13054832364618991232"
+        },
+        {
+          "file": "lib/commands/app-store-register.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "lib/commands/create-project.test.ts",
+          "hash": "13679365143953826118"
+        },
+        {
+          "file": "lib/commands/create-project.ts",
+          "hash": "9369530403565819569"
+        },
+        {
+          "file": "lib/commands/dependencies.ts",
+          "hash": "652648079460616752"
+        },
+        {
+          "file": "lib/commands/index.ts",
+          "hash": "10377590867345287027"
+        },
+        {
+          "file": "lib/commands/structure-generator.ts",
+          "hash": "12425304670211331716"
+        },
+        {
+          "file": "lib/commands/template-handler.test.ts",
+          "hash": "8423655886545138387"
+        },
+        {
+          "file": "lib/commands/template-handler.ts",
+          "hash": "575303449877646663"
+        },
+        {
+          "file": "lib/configs/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "lib/index.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "lib/models/app-store-data.ts",
+          "hash": "5633658955693464661"
+        },
+        {
+          "file": "lib/models/cli-param.ts",
+          "hash": "17788908323843301398"
+        },
+        {
+          "file": "lib/models/generator-config.ts",
+          "hash": "1307421121033149132"
+        },
+        {
+          "file": "lib/models/index.ts",
+          "hash": "5613153829418267408"
+        },
+        {
+          "file": "lib/models/inputs.ts",
+          "hash": "9547612939194352843"
+        },
+        {
+          "file": "lib/models/modify-data.ts",
+          "hash": "16051296915337428741"
+        },
+        {
+          "file": "lib/models/package-json.ts",
+          "hash": "5442822164994482538"
+        },
+        {
+          "file": "lib/models/project.ts",
+          "hash": "8803769671621866185"
+        },
+        {
+          "file": "lib/models/runtime.ts",
+          "hash": "11389164326952316227"
+        },
+        {
+          "file": "lib/utils/casing.ts",
+          "hash": "1508167873895153792"
+        },
+        {
+          "file": "lib/utils/chalk.ts",
+          "hash": "10985855025619771620"
+        },
+        {
+          "file": "lib/utils/conditionals.ts",
+          "hash": "13310070201506179726"
+        },
+        {
+          "file": "lib/utils/create-input.test.ts",
+          "hash": "9437657044852118955"
+        },
+        {
+          "file": "lib/utils/create-input.ts",
+          "hash": "1499002036515483146"
+        },
+        {
+          "file": "lib/utils/directories.ts",
+          "hash": "17250970210534129512"
+        },
+        {
+          "file": "lib/utils/file-templating.ts",
+          "hash": "8413361154737477101"
+        },
+        {
+          "file": "lib/utils/files.ts",
+          "hash": "7685777270304173733"
+        },
+        {
+          "file": "nx.json",
+          "hash": "9944771774863276872"
+        },
+        {
+          "file": "package-lock.json",
+          "hash": "11803900699159369579"
+        },
+        {
+          "file": "package.json",
+          "hash": "18088687939798499959",
+          "deps": [
+            "npm:chalk",
+            "npm:commander",
+            "npm:fs",
+            "npm:fs-extra",
+            "npm:handlebars",
+            "npm:path",
+            "npm:rxjs",
+            "npm:uuid",
+            "npm:@semantic-release/changelog",
+            "npm:@semantic-release/git",
+            "npm:@types/chalk",
+            "npm:@types/commander",
+            "npm:@types/fs-extra",
+            "npm:@types/jest",
+            "npm:@types/mustache",
+            "npm:@types/node",
+            "npm:@typescript-eslint/parser",
+            "npm:clean-webpack-plugin",
+            "npm:copy-webpack-plugin",
+            "npm:eslint",
+            "npm:eslint-config-prettier",
+            "npm:eslint-plugin-import",
+            "npm:eslint-plugin-node",
+            "npm:eslint-plugin-prettier",
+            "npm:eslint-plugin-react",
+            "npm:handlebars-loader",
+            "npm:husky",
+            "npm:jest",
+            "npm:prettier",
+            "npm:semantic-release",
+            "npm:supertest",
+            "npm:ts-jest",
+            "npm:ts-loader",
+            "npm:ts-node",
+            "npm:typescript",
+            "npm:webpack",
+            "npm:webpack-cli",
+            "npm:webpack-dev-server"
+          ]
+        },
+        {
+          "file": "templates/fa-template/.eslintrc.json",
+          "hash": "9706658643042657361"
+        },
+        {
+          "file": "templates/fa-template/.github/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "templates/fa-template/.github/auto-merge.yml",
+          "hash": "1908362272394807680"
+        },
+        {
+          "file": "templates/fa-template/.github/dependabot.yml",
+          "hash": "3872581735060184171"
+        },
+        {
+          "file": "templates/fa-template/.github/workflows/CICD.yml",
+          "hash": "16193983713198948430"
+        },
+        {
+          "file": "templates/fa-template/.github/workflows/automergePR.yml",
+          "hash": "2112931297561281475"
+        },
+        {
+          "file": "templates/fa-template/.github/workflows/dependabot-pr.yml",
+          "hash": "15337593668760251083"
+        },
+        {
+          "file": "templates/fa-template/.github/workflows/release.yml",
+          "hash": "10401740191501030561"
+        },
+        {
+          "file": "templates/fa-template/.gitignore",
+          "hash": "9486989687300664618"
+        },
+        {
+          "file": "templates/fa-template/.prettierignore",
+          "hash": "10549367350473536235"
+        },
+        {
+          "file": "templates/fa-template/.prettierrc",
+          "hash": "14700141473848627137"
+        },
+        {
+          "file": "templates/fa-template/environment/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "templates/fa-template/public/favicon.ico",
+          "hash": "14403696163316327077"
+        },
+        {
+          "file": "templates/fa-template/public/index.html",
+          "hash": "15183700256635332859"
+        },
+        {
+          "file": "templates/fa-template/public/logo192.png",
+          "hash": "15782526533594021768"
+        },
+        {
+          "file": "templates/fa-template/public/logo512.png",
+          "hash": "18399770467882723534"
+        },
+        {
+          "file": "templates/fa-template/public/manifest.json",
+          "hash": "1447645250373428393"
+        },
+        {
+          "file": "templates/fa-template/public/robots.txt",
+          "hash": "13952162886219042623"
+        },
+        {
+          "file": "templates/fa-template/src/App.css",
+          "hash": "16457583553712152214"
+        },
+        {
+          "file": "templates/fa-template/src/App.test.tsx",
+          "hash": "4195943836072337972"
+        },
+        {
+          "file": "templates/fa-template/src/App.tsx",
+          "hash": "8940104467341504037"
+        },
+        {
+          "file": "templates/fa-template/src/components/Header/Header.test.tsx",
+          "hash": "4595979742548113990"
+        },
+        {
+          "file": "templates/fa-template/src/components/Header/Header.tsx",
+          "hash": "8323808622218292499"
+        },
+        {
+          "file": "templates/fa-template/src/index.css",
+          "hash": "1998698843422333923"
+        },
+        {
+          "file": "templates/fa-template/src/index.test.tsx",
+          "hash": "15224793850033921286"
+        },
+        {
+          "file": "templates/fa-template/src/index.tsx",
+          "hash": "11953254537390405954"
+        },
+        {
+          "file": "templates/fa-template/src/logo.svg",
+          "hash": "5137778160416929466"
+        },
+        {
+          "file": "templates/fa-template/src/react-app-env.d.ts",
+          "hash": "3195158367843515590"
+        },
+        {
+          "file": "templates/fa-template/src/reportWebVitals.ts",
+          "hash": "4905365886999342103"
+        },
+        {
+          "file": "templates/fa-template/src/setupTests.ts",
+          "hash": "16903885983588411080"
+        },
+        {
+          "file": "templates/fa-template/template-files/README.md.handlebars",
+          "hash": "7520371203502593143"
+        },
+        {
+          "file": "templates/fa-template/template-files/fa-cli.json.handlebars",
+          "hash": "12012520700848290411"
+        },
+        {
+          "file": "templates/fa-template/template-files/package.json.handlebars",
+          "hash": "10143779287158951253"
+        },
+        {
+          "file": "templates/fa-template/tsconfig.json",
+          "hash": "2270283492852780348"
+        },
+        {
+          "file": "templates/fa-template/yarn.lock",
+          "hash": "11294528590630682622"
+        },
+        {
+          "file": "templates/ms-template/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "templates/ms-template/README.md",
+          "hash": "10271084830304519715"
+        },
+        {
+          "file": "templates/ms-template/cart.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "templates/ms-template/controllers/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "templates/ms-template/models/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "templates/ms-template/services/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "templates/ms-template/template-files/README.md.handlebars",
+          "hash": "10518268452383449610"
+        },
+        {
+          "file": "templates/ms-template/template-files/fa-cli.json.handlebars",
+          "hash": "12012520700848290411"
+        },
+        {
+          "file": "templates/ms-template/template-files/package.json.handlebars",
+          "hash": "17788331843775477726"
+        },
+        {
+          "file": "tsconfig.json",
+          "hash": "17430890086777703963"
+        },
+        {
+          "file": "webpack.config.js",
+          "hash": "13961958105349748701"
+        },
+        {
+          "file": "yarn.lock",
+          "hash": "10324714225277068917"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+
+Oops! Something went wrong! :(
+
+ESLint: 8.56.0
+
+ESLint couldn't find the config "react-app" to extend from. Please check that the name of the config is correct.
+
+The config "react-app" was referenced from the config file in "C:\Users\sapna.manokar\kente\cfa\templates\fa-template\dependencies\package.json".
+
+If you still have problems, please stop by https://eslint.org/chat/help to chat with the team.
+
+Warning: run-commands command "eslint ." exited with non-zero status code
