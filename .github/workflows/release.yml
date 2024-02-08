@@ -3,9 +3,11 @@ on:
   push:
     branches:
       - feature/devopspipelineadd
+      - release
   pull_request:
     branches:
       - main
+      - release
       - feature/devopspipelineadd
 jobs:
   ci:
