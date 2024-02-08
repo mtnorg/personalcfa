@@ -20,7 +20,7 @@ jobs:
       contents: write # to be able to publish a GitHub release
       issues: write # to be able to comment on released issues
       pull-requests: write # to be able to comment on released pull requests
-      
+
     if: ${{ github.actor != 'dependabot[bot]' }}
     steps:
       - name: Checkout repository
@@ -41,7 +41,7 @@ jobs:
 
       - name: Build artifacts
         run: npm run build
-      
+
       - name: publish artifacts
         run: npm publish
         env:
@@ -53,4 +53,3 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release@19 --repository-url https://github.com/mtnorg/personalcfa.git
-
