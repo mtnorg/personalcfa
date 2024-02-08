@@ -42,11 +42,6 @@ jobs:
       - name: Build artifacts
         run: npm run build
 
-      - name: publish artifacts
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-
       - name: Release
         if: github.event_name == 'push'
         env:
