@@ -2,17 +2,25 @@ name: Release
 on:
   push:
     branches:
-      - master
+      - feature/devopspipelineadd
+      - release
       - main
+      - master
   pull_request:
     branches:
       - main
+      - release
       - master
-      - feature/devopspipelineadd
+
 jobs:
   ci:
     name: 'Continuous integration for release'
     runs-on: 'ubuntu-latest'
+    permissions:
+      contents: write # to be able to publish a GitHub release
+      issues: write # to be able to comment on released issues
+      pull-requests: write # to be able to comment on released pull requests
+
     if: ${{ github.actor != 'dependabot[bot]' }}
     steps:
       - name: Checkout repository
@@ -26,7 +34,6 @@ jobs:
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
-          scope: '@kente'
           cache: 'npm'
 
       - name: Install CLI dependencies
@@ -40,4 +47,4 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
+        run: npx semantic-release@19 --repository-url https://github.com/mtnorg/personalcfa.git
