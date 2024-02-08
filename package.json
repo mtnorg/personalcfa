@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kente-trial/cfa.git"
+    "url": "git@github.com:mtnorg/personalcfa.git"
   },
   "keywords": [],
   "author": "",
@@ -146,9 +146,9 @@
     "registry": "https://npm.pkg.github.com"
   },
   "bugs": {
-    "url": "https://github.com/kente-trial/cfa/issues"
+    "url": "https://github.com/mtnorg/personalcfa/issues"
   },
-  "homepage": "https://github.com/kente-trial/cfa#readme",
+  "homepage": "https://github.com/mtnorg/personalcfa#readme",
   "directories": {
     "lib": "lib"
   }
