@@ -34,7 +34,7 @@ jobs:
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
-          scope: '@kente'
+          scope: '@cfa'
           cache: 'npm'
 
       - name: Install CLI dependencies
@@ -42,6 +42,11 @@ jobs:
 
       - name: Build artifacts
         run: npm run build
+      
+      - name: publish artifacts
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
       - name: Release
         if: github.event_name == 'push'
