@@ -5,7 +5,7 @@ on:
       - main
   pull_request:
     branches:
-      - main      
+      - main
 jobs:
   ci:
     name: 'Continuous integration for release'
@@ -25,7 +25,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@kente'
           cache: 'npm'
-      
+
       - name: Install CLI dependencies
         run: npm ci
 

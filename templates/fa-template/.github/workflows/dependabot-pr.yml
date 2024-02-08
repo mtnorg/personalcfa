@@ -41,14 +41,14 @@ jobs:
 
       - name: Build CLI
         run: npm run build
-     
+
   auto-merge:
     name: 'internal :: Automatically merge Dependabot upgrades'
     runs-on: ubuntu-latest
     permissions:
       pull-requests: read
     needs: dependabot
-    steps: 
+    steps:
       - uses: actions/checkout@v4.1.1
       - name: Automatically merge dependabot upgrades
         uses: ahmadnassri/action-dependabot-auto-merge@v2.6.6

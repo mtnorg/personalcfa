@@ -4,11 +4,14 @@ on:
     branches:
       - feature/devopspipelineadd
       - release
+      - main
+      - master
   pull_request:
     branches:
       - main
       - release
-      - feature/devopspipelineadd
+      - master
+
 jobs:
   ci:
     name: 'Continuous integration for release'
@@ -33,7 +36,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@kente'
           cache: 'npm'
-      
+
       - name: Install CLI dependencies
         run: npm ci
 
@@ -41,8 +44,9 @@ jobs:
         run: npm run build
 
       - name: Release
-        if: github.event_name == 'push' && github.ref == 'refs/heads/release'
+        if: github.event_name == 'push'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release@19 --repository-url https://github.com/mtnorg/personalcfa.git
+

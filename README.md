@@ -1,4 +1,6 @@
-When developing a Node.js command-line interface (CLI) tool, having a well-organized folder structure can contribute to the maintainability and clarity of your project. Below is a suggested folder structure for a Node.js CLI tool!try
+
+When developing a Node.js command-line interface (CLI) tool, having a well-organized folder structure can contribute to the maintainability and clarity of your project. Below is a suggested folder structure for a Node.js CLI tool!
+
 
 ```
 cli/

@@ -18,9 +18,7 @@
               "{workspaceRoot}/templates/fa-template/.eslintrc.json",
               "{workspaceRoot}/tools/eslint-rules/**/*",
               {
-                "externalDependencies": [
-                  "eslint"
-                ]
+                "externalDependencies": ["eslint"]
               }
             ],
             "executor": "nx:run-commands",
@@ -49,9 +47,7 @@
               "{workspaceRoot}/.eslintrc",
               "{workspaceRoot}/tools/eslint-rules/**/*",
               {
-                "externalDependencies": [
-                  "eslint"
-                ]
+                "externalDependencies": ["eslint"]
               }
             ],
             "executor": "nx:run-commands",
@@ -80,9 +76,7 @@
               "{workspaceRoot}/.eslintrc",
               "{workspaceRoot}/tools/eslint-rules/**/*",
               {
-                "externalDependencies": [
-                  "eslint"
-                ]
+                "externalDependencies": ["eslint"]
               }
             ],
             "executor": "nx:run-commands",
@@ -104,36 +98,26 @@
           "build": {
             "options": {
               "cwd": ".",
-              "args": [
-                "--node-env=production"
-              ],
+              "args": ["--node-env=production"],
               "command": "webpack-cli build"
             },
             "cache": true,
-            "dependsOn": [
-              "^build"
-            ],
+            "dependsOn": ["^build"],
             "inputs": [
               "default",
               "^default",
               {
-                "externalDependencies": [
-                  "webpack-cli"
-                ]
+                "externalDependencies": ["webpack-cli"]
               }
             ],
-            "outputs": [
-              "{workspaceRoot}/dist"
-            ],
+            "outputs": ["{workspaceRoot}/dist"],
             "executor": "nx:run-commands",
             "configurations": {}
           },
           "serve": {
             "options": {
               "cwd": ".",
-              "args": [
-                "--node-env=development"
-              ],
+              "args": ["--node-env=development"],
               "command": "webpack-cli serve"
             },
             "executor": "nx:run-commands",
@@ -142,9 +126,7 @@
           "preview": {
             "options": {
               "cwd": ".",
-              "args": [
-                "--node-env=production"
-              ],
+              "args": ["--node-env=production"],
               "command": "webpack-cli serve"
             },
             "executor": "nx:run-commands",
