@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:mtnorg/personalcfa.git"
+    "url": "https://github.com/mtnorg/personalcfa.git"
   },
   "keywords": [],
   "author": "",
@@ -75,11 +75,8 @@
     "webpack-dev-server": "^4.15.1"
   },
   "release": {
-    "branches": [
-      [
-        "release"
-      ]
-    ],
+    "branches": [ "release" ],
+    
     "plugins": [
       [
         "@semantic-release/commit-analyzer",
