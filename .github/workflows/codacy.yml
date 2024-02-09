@@ -17,6 +17,4 @@ jobs:
           # or
           # api-token: ${{ secrets.CODACY_API_TOKEN }}
           coverage-reports: /coverage/clover.xml
-        
-        with:
-          sarif_file: results.sarif
+
