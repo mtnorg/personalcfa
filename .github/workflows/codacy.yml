@@ -10,10 +10,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@main
 
-      - name: Run Codacy Analysis CLI
-        uses: codacy/codacy-analysis-cli-action@master
-        with:
-          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-          # or
-          # api-token: ${{ secrets.CODACY_API_TOKEN }}
-          upload: true
+      - name: Install Codacy Analysis Action
+        uses: codacy/codacy-analysis-action@v3
+
+      - name: Run Codacy Analysis
+        env:
+          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
+        run: |
+          codacy-analysis
