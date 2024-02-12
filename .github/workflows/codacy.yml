@@ -1,6 +1,6 @@
 name: Codacy Analysis CLI
 
-on: ["push"]
+on: ['push']
 
 jobs:
   codacy-analysis-cli:
@@ -17,4 +17,3 @@ jobs:
           # or
           # api-token: ${{ secrets.CODACY_API_TOKEN }}
           coverage-reports: lcov.info
-
